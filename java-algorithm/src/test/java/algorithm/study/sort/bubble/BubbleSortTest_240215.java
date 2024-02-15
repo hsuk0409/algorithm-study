@@ -1,11 +1,11 @@
-package algorithm.study.sort;
+package algorithm.study.sort.bubble;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 
-public class BubbleSortTest {
+public class BubbleSortTest_240215 {
 
     @Test
     @DisplayName("버블 정렬을 구현한다.")

@@ -3,7 +3,7 @@ package algorithm.study;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-public class PermutationTest {
+public class PermutationTest_240215 {
 
     @Test
     @DisplayName("중복이 없는 순열")
