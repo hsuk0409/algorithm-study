@@ -17,7 +17,7 @@ public class PermutationTest_240215 {
 
     static void perm(int[] arr, int[] output, boolean[] visited, int depth, int n, int r) {
         if (depth == r) {
-            myPrint(output, r);
+            print(output, r);
             return;
         }
 
@@ -41,7 +41,7 @@ public class PermutationTest_240215 {
 
     static void permutation(int[] arr, int[] output, int depth, int n, int r) {
         if (depth == r) {
-            myPrint(output, r);
+            print(output, r);
             return;
         }
 
@@ -51,7 +51,7 @@ public class PermutationTest_240215 {
         }
     }
 
-    static void myPrint(int[] output, int r) {
+    static void print(int[] output, int r) {
         for (int i = 0; i < r; ++i) {
             System.out.print(output[i] + " ");
         }
