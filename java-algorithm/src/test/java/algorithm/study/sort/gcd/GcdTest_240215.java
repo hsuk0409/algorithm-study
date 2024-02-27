@@ -1,4 +1,4 @@
-package algorithm.study;
+package algorithm.study.sort.gcd;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -24,9 +24,23 @@ public class GcdTest_240215 {
         System.out.println((a * b) / result2);
     }
 
+    @Test
+    @DisplayName("gcd 값 테스트")
+    public void gcd2() {
+        int a = 5;
+        int b = 13;
+
+        int result = gcdOfMyLogic(a, b);
+        System.out.println("============= GCD =============");
+        System.out.println("BigInteger value: " + result);
+    }
+
     private int gcdOfBigInteger(int a, int b) {
-        b = Math.min(a, b);
-        a = Math.max(a, b);
+        if (b > a) {
+            int tmp = a;
+            a = b;
+            b = tmp;
+        }
         BigInteger aVal = BigInteger.valueOf(a);
         BigInteger bVal = BigInteger.valueOf(b);
 
@@ -34,8 +48,11 @@ public class GcdTest_240215 {
     }
 
     private int gcdOfMyLogic(int a, int b) {
-        b = Math.min(a, b);
-        a = Math.max(a, b);
+        if (b > a) {
+            int tmp = a;
+            a = b;
+            b = tmp;
+        }
         while (b != 0) {
             int n = a % b;
             a = b;
